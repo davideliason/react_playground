@@ -39,6 +39,12 @@ class Colorizer extends React.Component {
 		}
 
 		var self = this;
+		
+// we set the ref attribute on the element we are interested in 
+// (the input field in this case.
+// We set a JS function which is called when that component is mounted.
+// Now, we can access the input element anywhere in the component
+// by calling ._input
 
 		return (
 				<div style={colorizerStyle}>
