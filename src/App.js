@@ -69,6 +69,8 @@ const Topics = ({ match }) => (
   </div>
 )
 
+const extraProps = "blue"
+
 const App = () => (
   <Router>
     <div>
@@ -86,7 +88,14 @@ const App = () => (
       <Route path="/about" component={About}/>
       <Route path="/topics" component={Topics}/>
       <Route path="/info" component={Info}/>
-      <Route path="/buttons" component={Buttons}/>
+      
+
+      <Route 
+         path='/buttons' 
+         render={(props) => (
+           <Buttons {...props} data={extraProps}/>
+          )}/>
+
       <Route component={NoMatch}/>
     </Switch>
     </div>

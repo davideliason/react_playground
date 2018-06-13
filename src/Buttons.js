@@ -5,6 +5,7 @@ class Buttons extends React.Component {
 		return (
 				<div>
 					<p>buttons</p>
+					{this.props.data}
 				</div>
 			);
 	}
