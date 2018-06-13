@@ -6,17 +6,16 @@ class App extends React.Component {
 
     return (
         <div>
+           <h3> SPA </h3>
            <ul>
               <li> Home</li>
               <li> Stuff </li>
               <li> Contact</li>
            </ul>
-           <div className="content">
-
-           </div>
+           <div className="content"></div>
         </div>
       );
   }
 }
 
-export default App;
+export default App; 
