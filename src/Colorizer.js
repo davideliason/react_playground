@@ -4,12 +4,12 @@ class Colorizer extends React.Component {
 	constructor(props){
 		super(props);
 		this.state = {
-			color: 'yellow',
+			color: '',
 			bgColor: ''
 		}
 
 		this.colorValue = this.colorValue.bind(this);
-		// this.setNewColor = this.setNewColor.bind(this);
+		this.setBGColor = this.setBGColor.bind(this);
 	}
 
 	colorValue(e) {
@@ -18,16 +18,42 @@ class Colorizer extends React.Component {
 		});
 	}
 
+	setBGColor(e) {
+		this.setState({
+			bgColor:this.state.color
+		});
+		this._input.value = "";
+		this._input.focus();
+
+		e.preventDefault();
+	}
+
 
 	render() {
 		var colorizerStyle = {
-			backgroundColor: this.state.color
+			backgroundColor: this.state.bgColor,
+			width: 500,
+			height: 480,
+			padding: 0
+
 		}
+
+		var self = this;
+
 		return (
 				<div style={colorizerStyle}>
-				  <p>Colorizer</p>
-				  <input onChange={this.colorValue} placeholder="enter color" />
-				  <p>Color: {this.state.color}</p>
+				  <form onSubmit={this.setBGColor}>
+				    <input 
+				         ref={
+				         	function(el) {
+				         		self._input = el;
+				         	}
+				         } 
+				    	 onChange={this.colorValue}
+				    	 placeholder="enter new color">
+				    </input>
+				    <button type="submit">Enter</button>
+				  </form>
 				</div>
 			);
 	}

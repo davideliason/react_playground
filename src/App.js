@@ -12,15 +12,16 @@ class App extends Component {
   render() {
     var appStyle = {
       backgroundColor : "blue",
-      width: 300,
-      height: 300,
+      width: 500,
+      height: 500,
       opacity: 0.5,
       textAlign: "center",
-      padding: 0,
+      paddingTop: 20
      
     }
     return (
       <div style={appStyle}> 
+        <h5>Colorizer</h5>
         <Colorizer />
       </div>
     );
