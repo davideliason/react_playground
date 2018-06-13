@@ -1,11 +1,13 @@
 import React, {Component} from 'react'
 
 import Buttons from './Buttons'
+import NoMatch from './NoMatch'
 
 import {
   BrowserRouter as Router,
   Route,
-  Link
+  Link,
+  Switch
 } from 'react-router-dom'
 
 const Home = () => (
@@ -79,12 +81,14 @@ const App = () => (
       </ul>
 
       <hr/>
-
+    <Switch>
       <Route exact path="/" component={Home}/>
       <Route path="/about" component={About}/>
       <Route path="/topics" component={Topics}/>
       <Route path="/info" component={Info}/>
       <Route path="/buttons" component={Buttons}/>
+      <Route component={NoMatch}/>
+    </Switch>
     </div>
   </Router>
 )
