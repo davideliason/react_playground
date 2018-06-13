@@ -1,30 +1,21 @@
-import React, { Component } from 'react';
-import Colorizer from './Colorizer';
+import React, {Component} from 'react';
+import Router from 'react-router';
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-       colorToPass: "orange"
-    }
-  }
-
+class App extends React.Component {
   render() {
-    var appStyle = {
-      backgroundColor : "blue",
-      width: 500,
-      height: 500,
-      opacity: 0.5,
-      textAlign: "center",
-      paddingTop: 20
-     
-    }
+
     return (
-      <div style={appStyle}> 
-        <h5>Colorizer</h5>
-        <Colorizer />
-      </div>
-    );
+        <div>
+           <ul>
+              <li> Home</li>
+              <li> Stuff </li>
+              <li> Contact</li>
+           </ul>
+           <div className="content">
+
+           </div>
+        </div>
+      );
   }
 }
 
