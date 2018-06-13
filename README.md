@@ -10,4 +10,4 @@ Experimentation galore:
 
 Note: Use of ref to give focus to input box and clear input box. Updating state.color as temp, then setting state.bgColor which will change colorizer bg color.
 
-2.
+2.branch 'SPA' (for single page app) for next project:
